@@ -172,6 +172,8 @@ networks:
 ```bash
 docker compose up -d
 ```
+![Дашборд Grafana](assets/images/compose%20ps%20grafana%20influxdb%20telegraf.png)
+
 В InfluxDB создаем базу данных и пользователя
 ```SQL
 create database sensors
@@ -314,8 +316,12 @@ services:
       BIRTH_MONTH: 9
       BIRTH_YEAR: 2003
 ```
+![Дашборд Grafana](assets/images/compose%20ps%20sensors%20full.png)
+
 # 7. Настройка Grafana
 Grafana доступна по адресу: `http://192.168.56.30:3000/`
+
+![Grafana](assets/images/Grafana%20save&test.png)
 
 ## Созданный дашбоард
 
@@ -336,3 +342,5 @@ Grafana доступна по адресу: `http://192.168.56.30:3000/`
 - Pressure Over Time
 - Humidity Over Time
 - Current Over Time
+
+  ![Дашборд Grafana](assets/images/Final%20Grafana.png)
