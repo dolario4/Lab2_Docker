@@ -1,0 +1,90 @@
+services:
+  temp1:
+    image: dolario4/sensor-simulator:latest
+    container_name: temp1
+    restart: unless-stopped
+    environment:
+      SENSOR_TYPE: temperature
+      SENSOR_NAME: temp1
+      PUBLISH_INTERVAL: 3
+      MQTT_HOST: 192.168.4.1
+      MQTT_PORT: 1883
+      MQTT_TOPIC: sensors/temperature
+      BIRTH_DAY: 4
+      BIRTH_MONTH: 9
+      BIRTH_YEAR: 2003
+
+  temp2:
+    image: dolario4/sensor-simulator:latest
+    container_name: temp2
+    restart: unless-stopped
+    environment:
+      SENSOR_TYPE: temperature
+      SENSOR_NAME: temp2
+      PUBLISH_INTERVAL: 5
+      MQTT_HOST: 192.168.4.1
+      MQTT_PORT: 1883
+      MQTT_TOPIC: sensors/temperature
+      BIRTH_DAY: 4
+      BIRTH_MONTH: 9
+      BIRTH_YEAR: 2003
+
+  pressure1:
+    image: dolario4/sensor-simulator:latest
+    container_name: pressure1
+    restart: unless-stopped
+    environment:
+      SENSOR_TYPE: pressure
+      SENSOR_NAME: pressure1
+      PUBLISH_INTERVAL: 4
+      MQTT_HOST: 192.168.4.1
+      MQTT_PORT: 1883
+      MQTT_TOPIC: sensors/pressure
+      BIRTH_DAY: 4
+      BIRTH_MONTH: 9
+      BIRTH_YEAR: 2003
+
+  pressure2:
+    image: dolario4/sensor-simulator:latest
+    container_name: pressure2
+    restart: unless-stopped
+    environment:
+      SENSOR_TYPE: pressure
+      SENSOR_NAME: pressure2
+      PUBLISH_INTERVAL: 6
+      MQTT_HOST: 192.168.4.1
+      MQTT_PORT: 1883
+      MQTT_TOPIC: sensors/pressure
+      BIRTH_DAY: 4
+      BIRTH_MONTH: 9
+      BIRTH_YEAR: 2003
+
+  current1:
+    image: dolario4/sensor-simulator:latest
+    container_name: current1
+    restart: unless-stopped
+    environment:
+      SENSOR_TYPE: current
+      SENSOR_NAME: current1
+      PUBLISH_INTERVAL: 4
+      MQTT_HOST: 192.168.4.1
+      MQTT_PORT: 1883
+      MQTT_TOPIC: sensors/current
+      BIRTH_DAY: 4
+      BIRTH_MONTH: 9
+      BIRTH_YEAR: 2003
+
+  humidity1:
+    image: dolario4/sensor-simulator:latest
+    container_name: humidity1
+    restart: unless-stopped
+    environment:
+      SENSOR_TYPE: humidity
+      SENSOR_NAME: humidity1
+      PUBLISH_INTERVAL: 7
+      MQTT_HOST: 192.168.4.1
+      MQTT_PORT: 1883
+      MQTT_TOPIC: sensors/humidity
+      BIRTH_DAY: 4
+      BIRTH_MONTH: 9
+      BIRTH_YEAR: 2003
